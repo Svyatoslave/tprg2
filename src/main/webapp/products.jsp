@@ -31,12 +31,7 @@
             String date = request.getParameter("expireDate");
             String quantity = request.getParameter("productQuantity");
             int location = Integer.parseInt(request.getParameter("productLocation"));
-            if (Warehouse.getAvailableQuantity() >= quantity){
                 Admin.addProduct(name, type, price, date, quantity, location);
-            }
-            else {
-                isAvailable = false;
-            }
         }
         if (request.getParameter("delete-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
