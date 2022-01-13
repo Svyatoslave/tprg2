@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #edf0d1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    height: 80px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #0088a9;
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #0088a9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+.main-area {
+    font-family: 'Montserrat', monospace ;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 30px;
+    padding: 20px;
+    color: #edf0d1;
+}
+.content-area {
+    display: flex;
+    margin: auto;
+    padding: 0 10%;
+}
+.img-area {
+    padding: 20px 0;
+    margin: 100px auto;
+}
+.img-area img {
+    width: 600px;
+}
+.text-area {
+    /*display: inline-block;*/
+    /*margin-left: 50%;*/
+    font-size: 16px;
+    padding: 2px 1em 0 200px;
+    margin: 190px auto;
+}
+.input-background {
+    background-color: #525461;
+    color: #edf0d1;
+    margin: 7px 0;
+    padding: 2px 10px;
+    border: none;
+    border-radius: 10px;
+}
+.product-table {
+    width: 100%;
+    border: none;
+    margin: 20px auto;
+    text-align: left;
+}
+.product-table thead th {
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+    background: #525461;
+}
+.product-table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+.product-table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+.product-table tbody td {
+    padding: 5px 10px;
+}
+.table tbody tr:nth-child(even){
+    background-color: #3b3c45;
+}
+.product-table tbody td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+.product-table tbody td:last-child {
+    border-radius: 0 8px 8px 0;
+}
+.flex-box {
+    display: flex;
+}
+.add-area {
+    margin-left: auto;
+    margin-right: auto;
+}
+.add-form {
+    margin: 30px;
+}
+.content-area {
+    display: flex;
+}
+.login-area {
+    margin: 100px auto;
+    width: 300px;
+}
+.quantity-area {
+    margin: 20px 0;
+}
+.quantity-area p {
+    margin: 10px 0;
+}
+
