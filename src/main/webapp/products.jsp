@@ -29,9 +29,14 @@
             String type = request.getParameter("productType");
             int price = Integer.parseInt(request.getParameter("productPrice"));
             String date = request.getParameter("expireDate");
-            String quantity = request.getParameter("productQuantity");
+            int quantity = Integer.parseInt(request.getParameter("productQuantity"));
             int location = Integer.parseInt(request.getParameter("productLocation"));
+            if (Warehouse.getAvailableQuantity() >= quantity){
                 Admin.addProduct(name, type, price, date, quantity, location);
+            }
+            else {
+                isAvailable = false;
+            }
         }
         if (request.getParameter("delete-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
@@ -148,7 +153,7 @@
                 </select><br/>
                     Цена: <input pattern="[0-9]+" maxlength="9" style="width: 275px" required class="input-background" type="text" name="productPrice"><br/>
                     Срок годности: <input  style="width: 206px" required class="input-background" type="date" name="expireDate"><br/>
-                    Количество: <input  style="width: 226px" required class="input-background" type="text" name="productQuantity"><br/>
+                    Количество: <input pattern="[0-9]+" maxlength="9" style="width: 226px" required class="input-background" type="text" name="productQuantity"><br/>
                     Ячейка: <input pattern="[0-9]+" maxlength="3" style="width: 260px" required class="input-background" type="text" name="productLocation"><br/>
                     <input class="input-background" type="submit" name="add-button" value="Добавить">
                 </form>
