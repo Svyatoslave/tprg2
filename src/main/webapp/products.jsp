@@ -139,10 +139,6 @@
                     </table>
                     <input class="input-background" type="submit" name="delete-button" value="Удалить">
                 </form>
-                <div class="quantity-area">
-                    <p>Общее количество мест на складе: 1000</p>
-                    <p>Доступное количество мест на складе: <%=Warehouse.getAvailableQuantity()%></p>
-                </div>
             </div>
             <div class="add-area">
                 <form class="add-form" action="" method="post">
