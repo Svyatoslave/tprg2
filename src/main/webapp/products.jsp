@@ -117,8 +117,8 @@
                             <th>Жанр</th>
                             <th>Цена</th>
                             <th>Дата публикации</th>
+                            <th>Кол-во</th>
                             <th>Автор</th>
-                            <th>Позиция</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -142,19 +142,19 @@
             </div>
             <div class="add-area">
                 <form class="add-form" action="" method="post">
-                    Название товара: <input  class="input-background" name="productName"><br/>
-                    Тип товара: <select style="width: 233px" required class="input-background" name="productType" id="">
+                    Названиие книги: <input  class="input-background" name="productName"><br/>
+                    Жанр: <select style="width: 233px" required class="input-background" name="productType" id="">
                     <option value=""></option>
-                    <option value="Электроника">Электроника</option>
-                    <option value="Бытовая техника">Бытовая техника</option>
-                    <option value="Еда">Еда</option>
-                    <option value="Химия">Химия</option>
-                    <option value="Лекарства">Лекарства</option>
+                    <option value="Электроника">Romans</option>
+                    <option value="Бытовая техника">Horror</option>
+                    <option value="Еда">Detective</option>
+                    <option value="Химия">Fantasy</option>
+                    <option value="Лекарства">Education</option>
                 </select><br/>
                     Цена: <input pattern="[0-9]+" maxlength="9" style="width: 275px" required class="input-background" type="text" name="productPrice"><br/>
-                    Срок годности: <input  style="width: 206px" required class="input-background" type="date" name="expireDate"><br/>
+                    Дата издания: <input  style="width: 206px" required class="input-background" type="date" name="expireDate"><br/>
                     Количество: <input pattern="[0-9]+" maxlength="9" style="width: 226px" required class="input-background" type="text" name="productQuantity"><br/>
-                    Автор: <input  maxlength="3" style="width: 260px" required class="input-background" type="text" name="productLocation"><br/>
+                    Автор: <input   style="width: 260px" required class="input-background" type="text" name="productLocation"><br/>
                     <input class="input-background" type="submit" name="add-button" value="Добавить">
                 </form>
             </div>
