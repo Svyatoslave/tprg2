@@ -5,7 +5,7 @@ import java.util.Random;
 public class Admin {
     public static String login = "admin";
     public static String password = "admin";
-    public static void addProduct(String name, String type, int price, String expireDate, String quantity, int location){
+    public static void addProduct(String name, String type, int price, String expireDate, int quantity, String location){
         Products product = new Products(name, type, price, expireDate, quantity, location);
         Database.productList.add(product);
     }
@@ -19,7 +19,7 @@ public class Admin {
     public static void removeClient(int id){
         Database.clientList.remove(Database.getClientByID(id));
     }
-    public static void addOrder(String dateTime, Products product, String quantity, String direction, Client client){
+    public static void addOrder(String dateTime, Products product, int quantity, String direction, Client client){
         Order order = new Order(dateTime, product, quantity, direction, client);
         Database.orderList.add(order);
     }

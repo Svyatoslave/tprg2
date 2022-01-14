@@ -9,10 +9,10 @@ public class Products {
     private String type;
     private int price;
     private String expireDate;
-    private String quantity;
-    private int location;
+    private int quantity;
+    private String location;
 
-    public Products(String name, String type, int price, String expireDate, String quantity, int location){
+    public Products(String name, String type, int price, String expireDate, int quantity, String location){
         this.id = ++count;
         this.name = name;
         this.type = type;
@@ -28,8 +28,8 @@ public class Products {
         type = randomString(10);
         price = 1+((int) (Math.random() * 10));
         expireDate = "01.01.2022";
-        quantity = randomString(10);
-        location = 1+((int) (Math.random() * 100));
+        quantity = 1+((int) (Math.random() * 100));
+        location = randomString(10);
     }
 
     private String randomString(int length) {
@@ -59,11 +59,11 @@ public class Products {
         return expireDate;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public int getLocation() {
+    public String getLocation() {
         return location;
     }
 
@@ -73,11 +73,11 @@ public class Products {
         this.price = price;
     }
 
-    public void setLocation(int location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 }
