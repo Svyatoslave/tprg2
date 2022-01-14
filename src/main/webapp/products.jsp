@@ -30,7 +30,7 @@
             int price = Integer.parseInt(request.getParameter("productPrice"));
             String date = request.getParameter("expireDate");
             int quantity = Integer.parseInt(request.getParameter("productQuantity"));
-            String  location = Integer.parseInt(request.getParameter("productLocation"));
+            String  location = request.getParameter("productLocation");
             if (Warehouse.getAvailableQuantity() >= quantity){
                 Admin.addProduct(name, type, price, date, quantity, location);
             }
