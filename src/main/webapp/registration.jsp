@@ -9,11 +9,11 @@
     if (request.getParameter("register-button") != null) {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
-        String name = request.getParameter("name");
+        String name = login;
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
-        String role = request.getParameter("role");
+        String role = "Поставщик";
         for (Account account: Database.accountList){
             if (account.getLogin().equals(login)) {
                 registerMessage = "Аккаунт с таким логином уже существует";
@@ -68,15 +68,9 @@
             <form action="" method="post">
                 Логин: <input style="width: 192px;" class="input-background" required type="text" name="login"><br>
                 Пароль: <input class="input-background" required type="password" name="password"><br>
-                Имя: <input style="width: 205px;" class="input-background" required type="text" name="name"><br>
                 Адресс: <input style="width: 185px;" class="input-background" required type="text" name="address"><br>
                 Телефон: <input style="width: 177px;" class="input-background" required type="text" name="phone"><br>
                 Почта: <input style="width: 192px;" class="input-background" required type="text" name="email"><br>
-                Роль:
-                <select style="width: 202px;" name="role" class="input-background" id="">
-                    <option value="Поставщик">Поставщик</option>
-                    <option value="Потребитель">Потребитель</option>
-                </select><br>
                 <input style="width: 150px; margin-left: 17%; text-align: center" class="input-background" type="submit" name="register-button" value="Зарегистрироваться">
             </form>
             <p><%if(registerMessage != null)%><%=registerMessage%></p>
