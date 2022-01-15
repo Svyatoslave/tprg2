@@ -14,7 +14,8 @@ public class Admin {
     }
 	 public static void checkProduct(int id, String nameLogin){
         data=Database.getProductByID(id);
-		Admin.addOrder(data[0], data[1], data[2], data[3], nameLogin);
+		Order order = new Order(data[0], data[1], data[2], data[3], nameLogin);
+		  Database.orderList.add(order);
     }
     public static void addClient(String name, String address, String email, String phone, String role){
         Client client = new Client(name, address, email, phone, role);
