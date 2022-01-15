@@ -199,9 +199,9 @@
                         </thead>
                         <tbody>
                         <%
-			String logish=cookie.getValue();
+			
                             for (Order order : Database.orderList) {
-                                if (order.getClient().getName(logish)) continue;
+                               if (order.getDirection().equals("Поставка")) continue;
                         %>
                         <tr>
                             <td><input type="checkbox" name=<%="checkbox" + order.getId()%> value="<%=order.getId()%>"></td>
