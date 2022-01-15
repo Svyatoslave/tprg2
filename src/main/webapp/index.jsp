@@ -34,7 +34,7 @@
             <li><a href="clients.jsp">Клиенты</a></li>
 			
             <% if (cookie != null){%>
-            <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
+            <%="<li style=\"color: white\">User: "+cookie.getValue()+"</li>"%>
             <%}%>
         </ul>
             </nav>
