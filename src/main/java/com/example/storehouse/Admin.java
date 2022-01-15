@@ -12,7 +12,7 @@ public class Admin {
     public static void removeProduct(int id){
         Database.productList.remove(Database.getProductByID(id));
     }
-	 public static void checkProduct(int id, nameLogin){
+	 public static void checkProduct(int id, String nameLogin){
         data=Database.getProductByID(id);
 		Admin.addOrder(data[0], data[1], data[2], data[3], nameLogin);
     }
