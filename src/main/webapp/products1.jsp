@@ -40,7 +40,7 @@
         }
         if (request.getParameter("check-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
-				String login=cookie.getValue()
+				String login=cookie.getValue();
 				int quantity = 1;
 				String direction="Processed"
                 if (request.getParameter("checkbox" + Database.productList.get(i).getId()) != null) {
