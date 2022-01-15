@@ -199,7 +199,7 @@
                         </thead>
                         <tbody>
                         <%
-			String logish=cookie.getValue()
+			String logish=cookie.getValue();
                             for (Order order : Database.orderList) {
                                 if (order.getClient().getName(logish)) continue;
                         %>
