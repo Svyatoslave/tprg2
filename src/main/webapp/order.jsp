@@ -57,7 +57,7 @@
             String type = request.getParameter("product-type");
             int price = Integer.parseInt(request.getParameter("product-price"));
             String expireDate = request.getParameter("expire-date");
-            int location = Integer.parseInt(request.getParameter("product-location"));
+            String location =request.getParameter("product-location");
             String clientName = request.getParameter("client-name");
             String deliveryDate = request.getParameter("date");
             int quantity = Integer.parseInt(request.getParameter("quantity"));
