@@ -38,11 +38,11 @@
                 isAvailable = false;
             }
         }
-       if (request.getParameter("check-button") != null) {
+        if (request.getParameter("check-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
-				string login=cookie.getValue();
+				String login=cookie.getValue();
 				int quantity = 1;
-				String direction="Processed"
+				String direction="Processed";
                 if (request.getParameter("checkbox" + Database.productList.get(i).getId()) != null) {
                     System.out.println(request.getParameter("checkbox" + Database.productList.get(i).getId()));
                     Admin.checkProduct(Database.productList.get(i).getId(),login,direction,quantity,Database.productList.get(i).getName(),Database.productList.get(i).getExpireDate());
@@ -50,7 +50,6 @@
             }
         }
     }
-	 
 %>
 <!DOCTYPE html>
 <html>
