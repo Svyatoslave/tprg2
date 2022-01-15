@@ -95,7 +95,6 @@
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Товары</a></li>
             <li><a href="order1.jsp">Заказы</a></li>
-            <li><a href="clients1.jsp">Клиенты</a></li>
 		<%}%>
 		<%if (isLoggedIn){%>
             <li><a href="index.jsp">Главная</a></li>
