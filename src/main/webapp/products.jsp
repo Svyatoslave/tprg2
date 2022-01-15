@@ -145,11 +145,11 @@
                     Названиие книги: <input  class="input-background" name="productName"><br/>
                     Жанр: <select style="width: 233px" required class="input-background" name="productType" id="">
                     <option value=""></option>
-                    <option value="Электроника">Romans</option>
-                    <option value="Бытовая техника">Horror</option>
-                    <option value="Еда">Detective</option>
-                    <option value="Химия">Fantasy</option>
-                    <option value="Лекарства">Education</option>
+                    <option value="Romans">Romans</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Detective">Detective</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Education">Education</option>
                 </select><br/>
                     Цена: <input pattern="[0-9]+" maxlength="9" style="width: 275px" required class="input-background" type="text" name="productPrice"><br/>
                     Дата издания: <input  style="width: 206px" required class="input-background" type="date" name="expireDate"><br/>
