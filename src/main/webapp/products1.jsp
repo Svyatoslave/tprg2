@@ -42,7 +42,7 @@
     }
 	 if (request.getParameter("check-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
-				string login=cookie.getValue();
+				string login=cookie.getValue()
 				int quantity = 1;
 				String direction="Processed"
                 if (request.getParameter("checkbox" + Database.productList.get(i).getId()) != null) {
@@ -95,6 +95,7 @@
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Товары</a></li>
             <li><a href="order1.jsp">Заказы</a></li>
+            <li><a href="clients1.jsp">Клиенты</a></li>
 		<%}%>
 		<%if (isLoggedIn){%>
             <li><a href="index.jsp">Главная</a></li>
