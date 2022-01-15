@@ -45,7 +45,7 @@
 				String direction="Processed"
                 if (request.getParameter("checkbox" + Database.productList.get(i).getId()) != null) {
                     System.out.println(request.getParameter("checkbox" + Database.productList.get(i).getId()));
-                    Admin.checkProduct(Database.productList.get(i).getId(),login,direction,quantity);
+                    Admin.checkProduct(Database.productList.get(i).getId(),login,direction,quantity,Database.productList.get(i).getName(),Database.productList.get(i).getExpireDate());
                 }
             }
         }
