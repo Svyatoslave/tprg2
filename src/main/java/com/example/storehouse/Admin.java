@@ -13,8 +13,8 @@ public class Admin {
         Database.productList.remove(Database.getProductByID(id));
     }
 	 public static void checkProduct(int id, String nameLogin,String direction,int quantity){
-       String name=Database.getProductNameById(id).name;
-		String date=Database.getProductByID(id).expireDate;
+       		String name=Database.getProductNameById(id).name;
+		String date=Database.getDateNameById(id).expireDate;
 		Order order = new Order(date, name, quantity, direction, nameLogin);
         Database.orderList.add(order);
     }
