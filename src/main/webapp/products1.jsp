@@ -22,7 +22,7 @@
             }
         }
     }
-    if (cookie != null && cookie.getValue().equals("admin")) {
+    if (cookie != null ) {
         isLoggedIn = true;
         if (request.getParameter("add-button") != null) {
             String name = request.getParameter("productName");
