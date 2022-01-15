@@ -25,7 +25,7 @@ public class Products {
     public Products() {
         id = ++count;
         name = randomString(10);
-        type = randomString(10);
+        type = randomType();
         price = 1+((int) (Math.random() * 10));
         expireDate = "01.01.2022";
         quantity = 1+((int) (Math.random() * 100));
@@ -41,6 +41,11 @@ public class Products {
                 .limit(length)
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                 .toString();
+    }
+        private String randomType() {
+        String[] myString = new String[]{"Romans", "Horror", "Detective", "Fantasy", "Education"};
+int n = (int)Math.floor(Math.random() * myString.length);
+return myString[n];
     }
 
     public int getId() {
