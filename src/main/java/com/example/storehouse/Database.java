@@ -80,22 +80,5 @@ public class Database {
         }
         return null;
     }
-		public static Products getProductNameById(int id){
-        for (Products product : productList) {
-            int productId = product.getId();
-            if (id == productId) {
-                return product.getName();
-            }
-			}
-        return null;
-    }
-	public static Products getDateNameById(int id){
-        for (Products product : productList) {
-            int productId = product.getId();
-            if (id == productId) {
-                return product.getExpireDate();
-            }
-}
-        return null;
-    }
+	
 }
