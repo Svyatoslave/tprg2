@@ -13,9 +13,9 @@ public class Admin {
         Database.productList.remove(Database.getProductByID(id));
     }
 	 public static void checkProduct(int id, String nameLogin,String direction,int quantity){
-       String naming=Database.getProductByID(id).name;
-		String dating=Database.getProductByID(id).expireDate;
-		Order order = new Order(dating, naming, quantity, direction, nameLogin);
+       String name=Database.getProductNameById(id).name;
+		String date=Database.getProductByID(id).expireDate;
+		Order order = new Order(date, name, quantity, direction, nameLogin);
         Database.orderList.add(order);
     }
     public static void addClient(String name, String address, String email, String phone, String role){
