@@ -1,4 +1,33 @@
- <ul class="nav-links">
+<%@ page import="com.example.storehouse.*" %>
+<%@ page import="javax.xml.crypto.Data" %>
+<%@ page import="com.example.storehouse.Database" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%
+    if (!Database.isEnable)Database.Init(10, 10, 10);
+    Cookie[] cookies = request.getCookies();
+    String cookieName = "status";
+    Cookie cookie = null;
+    if(cookies != null) {
+        for(Cookie c: cookies) {
+            if(cookieName.equals(c.getName())) {
+                cookie = c;
+                break;
+            }
+        }
+    }
+%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Main</title>
+        <link rel='stylesheet' type='text/css' href='style/style.css' />
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="images/temp.png" alt="logo pic">
+            <nav>
+                <ul class="nav-links">
 		<%if (!isLoggedIn){%>
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Товары</a></li>
@@ -16,3 +45,26 @@
             <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
             <%}%>
         </ul>
+            </nav>
+            <a class="cta" href="authorization.jsp"><button>Войти</button></a>
+        </header>
+        <main>
+            <div class="main-area">
+                <div class="content-area">
+                    <div class="img-area">
+                        <img src="images/warehouse.jpg" alt="">
+                    </div>
+                    <div class="text-area">
+                    <span>
+                        Добро пожаловать в книжный интернет-магазин. <br><br>
+                        В данном приложении вы можете найти интересующую вас книгу и заказать одну или несколько книг.<br><br>
+                        Помимо этого, для авторизованных как админ-пользователей имеется возможность добавлять/удалять клиентов, книги и заказы.<br><br>
+                        Приложение создано для курса "Технологии программирования" в рамках лабораторной работы № 2.<br><br>
+                        Над приложением работали: Холодов С.О., Плицын В.А., Варварин Я.Е.
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
