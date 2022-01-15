@@ -38,9 +38,7 @@
                 isAvailable = false;
             }
         }
-       
-    }
-	 if (request.getParameter("check-button") != null) {
+       if (request.getParameter("check-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
 				string login=cookie.getValue()
 				int quantity = 1;
@@ -51,6 +49,8 @@
                 }
             }
         }
+    }
+	 
 %>
 <!DOCTYPE html>
 <html>
