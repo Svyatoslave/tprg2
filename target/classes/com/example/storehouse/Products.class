@@ -1,0 +1,86 @@
+package com.example.storehouse;
+
+import java.util.Random;
+
+public class Products
+{
+    public static int count;
+    public int id;
+    public String name;
+    public String type;
+    public int price;
+    public String expireDate;
+    public int quantity;
+    public String location;
+    
+    public Products(final String name, final String type, final int price, final String expireDate, final int quantity, final String location) {
+        this.id = ++Products.count;
+        this.name = name;
+        this.type = type;
+        this.price = price;
+        this.expireDate = expireDate;
+        this.quantity = quantity;
+        this.location = location;
+    }
+    
+    public Products() {
+        this.id = ++Products.count;
+        this.name = this.randomString(10);
+        this.type = this.randomString(10);
+        this.price = 1 + (int)(Math.random() * 10.0);
+        this.expireDate = "01.01.2022";
+        this.quantity = 1 + (int)(Math.random() * 100.0);
+        this.location = this.randomString(10);
+    }
+    
+    private String randomString(final int length) {
+        final int leftLimit = 97;
+        final int rightLimit = 122;
+        final Random random = new Random();
+        return random.ints(leftLimit, rightLimit + 1).limit(length).collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
+    }
+    
+    public int getId() {
+        return this.id;
+    }
+    
+    public int getPrice() {
+        return this.price;
+    }
+    
+    public String getType() {
+        return this.type;
+    }
+    
+    public String getExpireDate() {
+        return this.expireDate;
+    }
+    
+    public int getQuantity() {
+        return this.quantity;
+    }
+    
+    public int getLocation() {
+        return this.location;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setPrice(final int price) {
+        this.price = price;
+    }
+    
+    public void setLocation(final int location) {
+        this.location = location;
+    }
+    
+    public void setQuantity(final int quantity) {
+        this.quantity = quantity;
+    }
+    
+    static {
+        Products.count = 0;
+    }
+}
