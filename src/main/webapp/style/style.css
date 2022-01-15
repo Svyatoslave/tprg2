@@ -4,11 +4,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #BDB76B;
+    background-color: #FA8072;
 }
 
 li, a, button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Courier New', sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: #000000;
