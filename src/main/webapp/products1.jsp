@@ -38,11 +38,12 @@
                 isAvailable = false;
             }
         }
-        if (request.getParameter("delete-button") != null) {
+        if (request.getParameter("check-button") != null) {
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
+				string login=cookie.getValue()
                 if (request.getParameter("checkbox" + Database.productList.get(i).getId()) != null) {
                     System.out.println(request.getParameter("checkbox" + Database.productList.get(i).getId()));
-                    Admin.removeProduct(Database.productList.get(i).getId());
+                    Admin.checkProduct(Database.productList.get(i).getId(),login);
                 }
             }
         }
@@ -126,8 +127,8 @@
                             <th>Жанр</th>
                             <th>Цена</th>
                             <th>Дата публикации</th>
+                            <th>Кол-во</th>
                             <th>Автор</th>
-                            <th>Позиция</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -146,29 +147,13 @@
                         <%  }%>
                         </tbody>
                     </table>
-                    <input class="input-background" type="submit" name="delete-button" value="Удалить">
-                </form>
-            </div>
-            <div class="add-area">
-                <form class="add-form" action="" method="post">
-                    Название товара: <input  class="input-background" name="productName"><br/>
-                    Тип товара: <select style="width: 233px" required class="input-background" name="productType" id="">
-                    <option value=""></option>
-                    <option value="Электроника">Электроника</option>
-                    <option value="Бытовая техника">Бытовая техника</option>
-                    <option value="Еда">Еда</option>
-                    <option value="Химия">Химия</option>
-                    <option value="Лекарства">Лекарства</option>
-                </select><br/>
-                    Цена: <input pattern="[0-9]+" maxlength="9" style="width: 275px" required class="input-background" type="text" name="productPrice"><br/>
-                    Срок годности: <input  style="width: 206px" required class="input-background" type="date" name="expireDate"><br/>
-                    Количество: <input pattern="[0-9]+" maxlength="9" style="width: 226px" required class="input-background" type="text" name="productQuantity"><br/>
-                    Автор: <input  style="width: 260px" required class="input-background" type="text" name="productLocation"><br/>
-                    <input class="input-background" type="submit" name="add-button" value="Добавить">
+                    <input class="input-background" type="submit" name="check-button" value="Заказать">
                 </form>
             </div>
         </div>
     </div>
 </main>
+</body>
+</html>
 </body>
 </html>
