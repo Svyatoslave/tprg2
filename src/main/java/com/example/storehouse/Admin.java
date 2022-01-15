@@ -12,8 +12,10 @@ public class Admin {
     public static void removeProduct(int id){
         Database.productList.remove(Database.getProductByID(id));
     }
+	naming =Database.getProductByID(id).getName();
+	dating =Database.getProductByID(id).getExpireDate();
 	 public static void checkProduct(int id, String nameLogin,String direction,int quantity){
-		Order order = new Order(Database.getProductByID(id).getExpireDate();, Database.getProductByID(id).getName();, quantity, direction, nameLogin);
+		Order order = new Order(dating, naming, quantity, direction, nameLogin);
         Database.orderList.add(order);
     }
     public static void addClient(String name, String address, String email, String phone, String role){
