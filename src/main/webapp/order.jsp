@@ -198,7 +198,7 @@
                             <td><input type="checkbox" name=<%="checkbox" + order.getId()%> value="<%=order.getId()%>"></td>
                             <td><%=order.getId()%></td>
                             <td><%=order.getProduct().getName()%></td>
-                             <%="<td >"+cookie.getValue()+"</td>"%>
+                            <td><%=order.getClient().getName()%></td>
                             <td><%=order.getDateTime()%></td>
                             <td><%=order.getQuantity()%></td>
                             <td><%=order.getDirection()%></td>
