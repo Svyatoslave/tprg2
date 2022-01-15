@@ -1,42 +1,29 @@
 package com.example.storehouse;
 
-import java.util.Random;
+import jakarta.servlet.http.Cookie;
 
-public class Admin {
-    public static String login = "admin";
-    public static String password = "admin";
-    public static void addProduct(String name, String type, int price, String expireDate, int quantity, String location){
-        Products product = new Products(name, type, price, expireDate, quantity, location);
-        Database.productList.add(product);
+public class Account {
+    private String login;
+    private String password;
+    //private Cookie accountLevel;
+    private Client client;
+
+    public Account(String login, String password, Client client){
+        this.login = login;
+        this.password = password;
+        this.client = client;
+        Admin.addClient(client.getName(), client.getAddress(), client.getEmail(), client.getPhone(), client.getRole());
     }
-    public static void removeProduct(int id){
-        Database.productList.remove(Database.getProductByID(id));
+
+    public String getLogin() {
+        return login;
     }
-	 public static void checkProduct(int id, String nameLogin,String direction,int quantity){
-        name=Database.getProductByID(id).name;
-		date=Database.getProductByID(id).expireDate;
-		
-		Admin.addOrder(date, name, quantity, direction, nameLogin);
+
+    public String getPassword() {
+        return password;
     }
-    public static void addClient(String name, String address, String email, String phone, String role){
-        Client client = new Client(name, address, email, phone, role);
-        Database.clientList.add(client);
+
+    public Client getClient() {
+        return client;
     }
-    public static void removeClient(int id){
-        Database.clientList.remove(Database.getClientByID(id));
-    }
-    public static void addOrder(String dateTime, Products product, int quantity, String direction, Client client){
-        Order order = new Order(dateTime, product, quantity, direction, client);
-        Database.orderList.add(order);
-    }
-    public static void removeOrder(int id){
-        Database.orderList.remove(Database.getOrderByID(id));
-    }
-    public static void addAccount(String login, String password, Client client){
-        Account account = new Account(login, password, client);
-        Database.accountList.add(account);
-    }
-//    public static void removeAccount(int id){
-//        Database.productList.remove(Database.getProductByID(id));
-//    }
 }
