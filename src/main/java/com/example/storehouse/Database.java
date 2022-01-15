@@ -86,6 +86,9 @@ public class Database {
             if (id == productId) {
                 return product.getName();
             }
+			}
+        return null;
+    }
 	public static Products getDateNameById(int id){
         for (Products product : productList) {
             int productId = product.getId();
@@ -93,4 +96,6 @@ public class Database {
                 return product.getExpireDate();
             }
 }
+        return null;
+    }
 
