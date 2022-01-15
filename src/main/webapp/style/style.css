@@ -42,7 +42,7 @@ header {
 }
 
 .nav-links li a:hover {
-    color: #00FF00;
+    color: #32CD32;
 }
 
 button {
@@ -64,7 +64,7 @@ button:hover {
     font-size: 14px;
     margin: 30px;
     padding: 20px;
-    color: #edf0d1;
+    color: #000000;
 }
 .content-area {
     display: flex;
