@@ -206,8 +206,8 @@
                             <td><%=order.getQuantity()%></td>
                             <td><%=order.getDirection()%></td>
                         </tr>
-                        <%  }}}%>
-				<%  else{%>	
+                        <%  }}%>
+				<%}else{%>	
 			<h1>Чтобы посмотреть заказы сначала авторизируйтесь</h1>
 														      <%}%>	
                         </tbody>
