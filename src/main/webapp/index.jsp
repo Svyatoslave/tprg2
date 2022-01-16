@@ -30,7 +30,7 @@
             <nav>
 		     <ul class="nav-links">
 		    
-            <li><a href="index1.jsp">Главная</a></li>
+            <li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
 			<% if (cookie != null){%>     
