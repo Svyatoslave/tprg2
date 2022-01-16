@@ -38,11 +38,35 @@ header {
 }
 
 .nav-links li a {
-    transition: all 0.3s ease 0s;
+  width:120px;
+  text-align:center;
+  display:block;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  border: #000 1px solid;
+  color: #000;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+   margin: 20px auto;
+  transition: .5s;
+  border-radius: 0px; 
 }
 
 .nav-links li a:hover {
-    color: #FFFFFF;
+  top: 5px;
+  transition: .5s;
+  color: #FFF;
+  border: #FFF 1px solid;
+  border-radius: 10px;
+}
+
+.nav-links li a:active {
+  color: #000;
+  border: #FFF 1px solid;
+  transition: .07s;
+  background-color: #FFF;
 }
 
 button {
@@ -86,43 +110,21 @@ button:hover {
     margin: 190px auto;
 }
 .input-background {
-    background-color: #525461;
+    background-color: #c83240;
     color: #edf0d1;
     margin: 7px 0;
     padding: 2px 10px;
     border: none;
     border-radius: 10px;
 }
-.product-table {
-    width: 100%;
-    border: none;
-    margin: 20px auto;
-    text-align: left;
-}
-.product-table thead th {
-    font-weight: bold;
-    border: none;
-    padding: 5px 10px;
-    background: #525461;
-}
-.product-table thead tr th:first-child {
-    border-radius: 8px 0 0 8px;
-}
-.product-table thead tr th:last-child {
-    border-radius: 0 8px 8px 0;
-}
-.product-table tbody td {
-    padding: 5px 10px;
-}
-.table tbody tr:nth-child(even){
-    background-color: #3b3c45;
-}
-.product-table tbody td:first-child {
-    border-radius: 8px 0 0 8px;
-}
-.product-table tbody td:last-child {
-    border-radius: 0 8px 8px 0;
-}
+table {width: 100%; border-collapse: separate; border-spacing: 4px; margin: 20px auto;}
+table thead tr {color: #ffffff; font-weight: bold;}
+table thead tr th {background: #c83240;}
+table tr td {border-right: 1px solid #dfdfdf;}
+table tbody tr:nth-child(1n) {background: #f6f6f6;}
+table tbody tr:nth-child(2n) {background: #e6e6e6;}
+table tbody tr:hover {background: #ffe8e8; transition-duration: 0.5s;}
+
 .flex-box {
     display: flex;
 }
@@ -146,4 +148,3 @@ button:hover {
 .quantity-area p {
     margin: 10px 0;
 }
-
