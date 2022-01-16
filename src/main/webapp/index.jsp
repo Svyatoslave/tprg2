@@ -15,7 +15,6 @@
             }
         }
     }
-    int myElem;
     if(!myElem){
     cookie=null;
      int myElem=1;
