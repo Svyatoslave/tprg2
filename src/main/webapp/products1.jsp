@@ -82,16 +82,15 @@
 <%if (!isAvailable){%>
 <%="<script>alert(\"Недостаточно места на складе\")</script>"%>
 <%}%>
-<%if (!isLoggedIn){
     if(request.getParameter("add-button")!=null || request.getParameter("delete-button")!=null){%>
 <%="<script>alert(\"Вы не являетесь админом, зайдитие под аккаунтом админа чтобы работать с записями\")</script>"%>
-    <%}}%>
+    <%}%>
 <header>
     <img class="logo" src="images/temp.png" alt="logo pic">
      <nav>
         <ul class="nav-links">
             <li><a href="index.jsp">Главная</a></li>
-            <li><a href="products1.jsp">КНиги</a></li>
+            <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
             <% if (cookie != null){%>
             <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
