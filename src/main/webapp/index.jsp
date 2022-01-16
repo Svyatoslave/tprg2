@@ -46,7 +46,7 @@
         </ul>
     </nav>
 		<% if (cookie != null){%>
-            <a class="cta"><button>Выйти</button></a>
+            <a class="cta" href="authorization.jsp"><button>Выйти</button></a>
             <%}else{%>
             <a class="cta" href="authorization.jsp"><button>Войти</button></a>
 		<%}%>
