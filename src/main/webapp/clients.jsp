@@ -106,7 +106,7 @@
     <div class="main-area">
         <div style="margin-bottom: 30px">
             <h3 style="margin: 15px 0 15px 10% ">Поиск</h3>
-            <input style="margin-left: 10%" class="input-background" type="text" placeholder="Поиск по потребителям и поставщикам" id="search-text" onkeyup="tableSearch()">
+            <input style="margin-left: 10%" class="input-background" type="text" placeholder="Поиск по клиентам" id="search-text" onkeyup="tableSearch()">
         </div>
         <div class="content-area">
             <form action="" method="post">
