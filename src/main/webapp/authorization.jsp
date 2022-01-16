@@ -32,7 +32,7 @@
                         Cookie status = new Cookie("status", account.getLogin());
                         status.setMaxAge(24 * 60 * 60);
                         response.addCookie(status);
-                        response.sendRedirect("index.jsp");
+                        response.sendRedirect("index1.jsp");
                     }
                 }
             }
