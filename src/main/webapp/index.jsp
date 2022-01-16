@@ -35,8 +35,9 @@
             <li><a href="products.jsp">Книги</a></li>
             <li><a href="order.jsp">Заказы</a></li>
             <li><a href="clients.jsp">Клиенты</a></li>
+			     <%}%>
            <%=<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
-            <%}%>
+            
 
 		<%}else{%>
 		    <li><a href="index.jsp">Главная</a></li>
