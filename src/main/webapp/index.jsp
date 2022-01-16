@@ -53,7 +53,9 @@
 </ul>
     </nav>
 		<% if (cookie != null){%>
-            <a class="cta" href="authorization.jsp"><button>Выйти</button></a>
+             <a class="cta" onclick=<% 
+cookies[0].setMaxAge(0);
+response.addCookie(cookies[0]); %> ><button>Выйти</button></a>
             <%}else{%>
             <a class="cta" href="authorization.jsp"><button>Войти</button></a>
 		<%}%>
