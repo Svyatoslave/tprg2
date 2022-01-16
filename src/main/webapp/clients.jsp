@@ -41,7 +41,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Orders</title>
+    <title>Книги</title>
     <link rel='stylesheet' type='text/css' href='style/style.css' />
     <script>
         function tableSearch() {
@@ -88,7 +88,7 @@
     <nav>
         <ul class="nav-links">
             <li><a href="index1.jsp">Главная</a></li>
-            <li><a href="products.jsp">Товары</a></li>
+            <li><a href="products.jsp">Книги</a></li>
             <li><a href="order.jsp">Заказы</a></li>
             <li><a href="clients.jsp">Клиенты</a></li>
             <% if (cookie != null){%>
