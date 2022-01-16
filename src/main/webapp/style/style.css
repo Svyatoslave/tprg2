@@ -119,7 +119,7 @@ button:hover {
 table {width: 130%; border-collapse: separate; border-spacing: 4px; margin: 20px auto;}
 table thead tr {color: #ffffff; font-weight: bold;}
 table thead tr th {background: #c83240;}
-table tr td {border-right: 1px solid #dfdfdf;}
+table tr td {height: 30px; border-right: 1px solid #dfdfdf;}
 table tbody tr:nth-child(1n) {background: #f6f6f6;}
 table tbody tr:nth-child(2n) {background: #e6e6e6;}
 table tbody tr:hover {background: #ffe8e8; transition-duration: 0.5s;}
