@@ -137,6 +137,7 @@
                         <%  }%>
                         </tbody>
                     </table>
+                     <input type="submit" name="delete-button" class="input-background" value="Удалить">
                 </div>
         </div>
     </div>
