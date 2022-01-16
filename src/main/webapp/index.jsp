@@ -28,12 +28,12 @@
             <img class="logo" src="images/temp.png" alt="logo pic">
             <nav>
         <ul class="nav-links">
-		<%if (!isLoggedIn){%>
+		<%if (cookie.getValue()!="admin"){%>
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
 		<%}%>
-		<%if (isLoggedIn){%>
+		<%if (cookie.getValue()=="admin"){%>
             <li><a href="index.jsp">Главная</a></li>
             <li><a href="products.jsp">Книги</a></li>
             <li><a href="order.jsp">Заказы</a></li>
