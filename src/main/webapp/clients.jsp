@@ -138,55 +138,6 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="client-table">
-                    <table id="table-id2" class="product-table">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>ID</th>
-                            <th>Имя</th>
-                            <th>Адресс</th>
-                            <th>Телефон</th>
-                            <th>Почта</th>
-                            <th>Роль</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <%
-                            for(Client client: Database.clientList) {
-                                if(client.getRole().equals("Поставщик")) {continue;}
-                        %>
-                        <tr>
-                            <td><input type="checkbox" name=<%="checkbox"+client.getId()%> value="<%=client.getId()%>"></td>
-                            <td><%=client.getId()%></td>
-                            <td><%=client.getName()%></td>
-                            <td><%=client.getAddress()%></td>
-                            <td><%=client.getPhone()%></td>
-                            <td><%=client.getEmail()%></td>
-                            <td><%=client.getRole()%></td>
-                        </tr>
-                        <%  }%>
-                        </tbody>
-                    </table>
-                    <input type="submit" name="delete-button" class="input-background" value="Удалить">
-                </div>
-            </form>
-            <div class="add-area">
-                <form class="add-form" action="" method="post">
-                    Имя: <input  class="input-background" name="full-name"><br/>
-                    Адрес: <input  class="input-background" name="address"><br/>
-                    Телефон: <input required class="input-background" type="tel" placeholder="###-###-##-##"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone"><br/>
-                    Почта: <input required class="input-background" type="email" name="email"><br/>
-                    Роль:
-                    <select required class="input-background" name="role" id="">
-                        <option value=""></option>
-                        <option value="<%=Role.provider()%>"><%=Role.provider()%></option>
-                        <option value="<%=Role.consumer()%>"><%=Role.consumer()%></option>
-                    </select>
-                    <input class="input-background" type="submit" name="add-button" value="Добавить">
-                </form>
-            </div>
         </div>
     </div>
 </main>
