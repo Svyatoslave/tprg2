@@ -51,10 +51,9 @@
     <img class="logo" src="images/temp.png" alt="logo pic">
     <nav>
         <ul class="nav-links">
-            <li><a href="index.jsp">Главная</a></li>
-            <li><a href="products.jsp">Товары</a></li>
-            <li><a href="order.jsp">Заказы</a></li>
-            <li><a href="clients.jsp">Клиенты</a></li>
+                      <li><a href="index.jsp">Главная</a></li>
+            <li><a href="products1.jsp">Книги</a></li>
+            <li><a href="order1.jsp">Мои Заказы</a></li>
             <% if (cookie != null){%>
             <%="<li style=\"color: white\">User: "+cookie.getValue()+"</li>"%>
             <%}%>
