@@ -24,7 +24,7 @@
                 Cookie status = new Cookie("status", "admin");
                 status.setMaxAge(24 * 60 * 60);
                 response.addCookie(status);
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("index1.jsp");
             }
             else {
                 for (Account account : Database.accountList) {
@@ -32,7 +32,7 @@
                         Cookie status = new Cookie("status", account.getLogin());
                         status.setMaxAge(24 * 60 * 60);
                         response.addCookie(status);
-                        response.sendRedirect("index1.jsp");
+                        response.sendRedirect("index.jsp");
                     }
                 }
             }
@@ -48,7 +48,7 @@
                 cookie.setMaxAge(24 * 60 * 60);
                 response.addCookie(cookie);
                 System.out.println(cookie.getName() + "=" + cookie.getValue());
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("index1.jsp");
             }
             else {
                 for (Account account : Database.accountList) {
