@@ -41,7 +41,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Книги</title>
+    <title>Клиенты</title>
     <link rel='stylesheet' type='text/css' href='style/style.css' />
     <script>
         function tableSearch() {
