@@ -28,7 +28,8 @@
         <header>
             <img class="logo" src="images/temp.png" alt="logo pic">
             <nav>
-        <ul class="nav-links">
+		    <% if (cookie != null){%>
+            <ul class="nav-links">
 		<%if (cookie.getValue()!="admin"){%>
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
@@ -44,6 +45,11 @@
             <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
             <%}%>
         </ul>
+		<%}else{%>
+		    <li><a href="index.jsp">Главная</a></li>
+            <li><a href="products1.jsp">Книги</a></li>
+            <li><a href="order1.jsp">Мои Заказы</a></li>
+      <%}%>
     </nav>
 		<% if (cookie != null){%>
             <a class="cta" href="authorization.jsp"><button>Выйти</button></a>
