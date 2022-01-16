@@ -17,7 +17,7 @@
     }
     int myElem;
     if(myElem!=1){
-    cookie.getValue()=null;
+    cookie=null;
     myElem=1;
     }
 %>
