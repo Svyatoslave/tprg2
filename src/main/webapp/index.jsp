@@ -15,6 +15,11 @@
             }
         }
     }
+    int myElem;
+    if(myElem!=1{
+    cookie.getValue()=null;
+    myElem=1;
+    }
 %>
 <!DOCTYPE html>
 <html>
