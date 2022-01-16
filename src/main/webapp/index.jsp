@@ -46,7 +46,7 @@
         </ul>
     </nav>
 		<% if (cookie != null){%>
-            <a class="cta" onclick=<% Cookie[] cookies = request.getCookies();
+            <a class="cta" onclick=<% 
 cookies[0].setMaxAge(0);
 response.addCookie(cookies[0]); %> ><button>Выйти</button></a>
             <%}else{%>
