@@ -191,6 +191,7 @@
                         </thead>
                         <tbody>
                         <%
+			if (cookie != null){
 			String loginsh=cookie.getValue();
 			 for (Order order : Database.orderList) {
 			 if (loginsh.equals(order.getClient().getName()))
@@ -205,7 +206,9 @@
                             <td><%=order.getQuantity()%></td>
                             <td><%=order.getDirection()%></td>
                         </tr>
-                        <%  }}%>
+                        <%  }}}%>
+				<%  else{%>	
+			<h1>Чтобы посмотреть заказы сначала авторизируйтесь</h1>
                         </tbody>
                     </table>
                     <input class="input-background" type="submit" name="delete-button1" value="Удалить">
