@@ -3,6 +3,7 @@
 <%@ page import="com.example.storehouse.Database" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
+ 
     if (!Database.isEnable)Database.Init(10, 10, 10);
     Cookie[] cookies = request.getCookies();
     String cookieName = "status";
@@ -15,11 +16,9 @@
             }
         }
     }
-     int myElem;
-    if(!myElem){
-    cookie=null;
-     myElem=1;
-    }
+    if (request.getParameter("button1") != null) {
+            cookie=null;
+        }
 %>
 <!DOCTYPE html>
 <html>
@@ -49,7 +48,11 @@
             <%}%>
         </ul>
     </nav>
+		<% if (cookie != null){%>
+            <a class="cta"  name="button1" ><button>Выйти</button></a>
+            <%}else{%>
             <a class="cta" href="authorization.jsp"><button>Войти</button></a>
+		<%}%>
         </header>
         <main>
             <div class="main-area">
