@@ -29,7 +29,7 @@
             <img class="logo" src="images/temp.png" alt="logo pic">
             <nav>
         <ul class="nav-links">
-		<%if (cookie.getValue()!="admin" || cookie==null ){%>
+		<%if (cookie.getValue()!="admin"){%>
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
@@ -46,9 +46,7 @@
         </ul>
     </nav>
 		<% if (cookie != null){%>
-            <a class="cta" onclick=<% 
-cookies[0].setMaxAge(0);
-response.addCookie(cookies[0]); %> ><button>Выйти</button></a>
+            <a class="cta"><button>Выйти</button></a>
             <%}else{%>
             <a class="cta" href="authorization.jsp"><button>Войти</button></a>
 		<%}%>
