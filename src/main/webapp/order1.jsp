@@ -87,7 +87,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Orders</title>
+    <title>Заказы</title>
     <link rel='stylesheet' type='text/css' href='style/style.css' />
     <script>
         function searchByDate() {
