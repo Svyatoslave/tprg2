@@ -30,12 +30,12 @@
         <ul class="nav-links">
 		<%if (!isLoggedIn){%>
 		<li><a href="index.jsp">Главная</a></li>
-            <li><a href="products1.jsp">Товары</a></li>
-            <li><a href="order1.jsp">Заказы</a></li>
+            <li><a href="products1.jsp">Книги</a></li>
+            <li><a href="order1.jsp">Мои Заказы</a></li>
 		<%}%>
 		<%if (isLoggedIn){%>
             <li><a href="index.jsp">Главная</a></li>
-            <li><a href="products.jsp">Товары</a></li>
+            <li><a href="products.jsp">Книги</a></li>
             <li><a href="order.jsp">Заказы</a></li>
             <li><a href="clients.jsp">Клиенты</a></li>
             <%}%>
