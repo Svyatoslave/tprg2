@@ -218,32 +218,6 @@
                     <input class="input-background" type="submit" name="delete-button1" value="Удалить">
                 </form>
             </div>
-            <div class="add-area">
-                <form class="add-form" action="" method="post">
-                    Название товара:
-                    <select required name="product-name" class="input-background">
-                        <option value=""></option>
-                        <%
-                            for (Products product : Database.productList) {
-                        %>
-                        <option value="<%=product.getName()%>"><%=product.getName()%></option>
-                        <%}%>
-                    </select><br/>
-                    Имя заказчика:
-                    <select required name="client-name" class="input-background">
-                        <option value=""></option>
-                        <%
-                            for (Client client : Database.clientList) {
-                                if (client.getRole().equals("Поставщик")) continue;
-                        %>
-                        <option value="<%=client.getName()%>"><%=client.getName()%></option>
-                        <%}%>
-                    </select><br/>
-                    Дата заказа: <input style="width: 275px" required class="input-background" type="date" name="date"><br/>
-                    Количество: <input pattern="[0-9]+" maxlength="9" style="width: 206px" required class="input-background" type="text" name="quantity"><br/>
-                    <input class="input-background" type="submit" name="add-button1" value="Добавить">
-                </form>
-            </div>
         </div>
     </div>
 </main>
