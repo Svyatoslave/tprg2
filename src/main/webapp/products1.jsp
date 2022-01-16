@@ -49,7 +49,7 @@
                     Admin.checkProduct(Database.productList.get(i).getId(),login,direction,quantity,Database.productList.get(i).getName(),Database.productList.get(i).getExpireDate());
                 }
 			}
-		}else(%>
+		}else{%>
 		<%="<script>alert(\"Вы не вошли в аккаунт чтобы работать с заказами\")</script>"%>
 		<%}
         }
