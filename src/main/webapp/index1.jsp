@@ -21,7 +21,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Main</title>
+        <title>Главная</title>
         <link rel='stylesheet' type='text/css' href='style/style.css' />
     </head>
     <body>
