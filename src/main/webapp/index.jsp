@@ -30,26 +30,21 @@
             <nav>
 		     <ul class="nav-links">
 		    <% if (cookie != null){%>
-           
-		<%if (cookie.getValue()!="admin"){%>
-		<li><a href="index.jsp">Главная</a></li>
-            <li><a href="products1.jsp">Книги</a></li>
-            <li><a href="order1.jsp">Мои Заказы</a></li>
-		<%}%>
 		<%if (cookie.getValue()=="admin"){%>
             <li><a href="index.jsp">Главная</a></li>
             <li><a href="products.jsp">Книги</a></li>
             <li><a href="order.jsp">Заказы</a></li>
             <li><a href="clients.jsp">Клиенты</a></li>
-            <%}%>
-            <% if (cookie != null){%>
-            <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
+           <li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
             <%}%>
 
 		<%}else{%>
 		    <li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
+			        <% if (cookie != null){%>
+            <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
+            <%}%>
       <%}%>
 </ul>
     </nav>
