@@ -15,9 +15,10 @@
             }
         }
     }
+     int myElem;
     if(!myElem){
     cookie=null;
-     int myElem=1;
+     myElem=1;
     }
 %>
 <!DOCTYPE html>
