@@ -200,8 +200,7 @@
                         <tbody>
                         <%
 			String loginsh=cookie.getValue();
-			
-                            
+			 for (Order order : Database.orderList) {
                                if (order.getClient().getName()==loginsh){
                         %>
                         <tr>
