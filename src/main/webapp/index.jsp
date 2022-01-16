@@ -44,12 +44,13 @@
             <% if (cookie != null){%>
             <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
             <%}%>
-        </ul>
+
 		<%}else{%>
 		    <li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
       <%}%>
+</ul>
     </nav>
 		<% if (cookie != null){%>
             <a class="cta" href="authorization.jsp"><button>Выйти</button></a>
