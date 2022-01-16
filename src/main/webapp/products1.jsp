@@ -59,7 +59,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
+    <title>Книги</title>
     <link rel='stylesheet' type='text/css' href='style/style.css' />
     <script>
         function tableSearch() {
