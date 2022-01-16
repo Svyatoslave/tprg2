@@ -82,9 +82,7 @@
 <%if (!isAvailable){%>
 <%="<script>alert(\"Недостаточно места на складе\")</script>"%>
 <%}%>
-    if(request.getParameter("add-button")!=null || request.getParameter("delete-button")!=null){%>
-<%="<script>alert(\"Вы не являетесь админом, зайдитие под аккаунтом админа чтобы работать с записями\")</script>"%>
-    <%}%>
+   
 <header>
     <img class="logo" src="images/temp.png" alt="logo pic">
      <nav>
