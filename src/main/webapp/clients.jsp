@@ -96,7 +96,11 @@
             <%}%>
         </ul>
     </nav>
-    <a class="cta" href="authorization.jsp"><button>Войти</button></a>
+    <% if (cookie != null){%>
+              <a class="cta" href="authorization.jsp"><button>Выйти</button></a>
+            <%}else{%>
+            <a class="cta" href="authorization.jsp"><button>Войти</button></a>
+		<%}%>
 </header>
 <main>
     <div class="main-area">
@@ -117,7 +121,6 @@
                             <th>Адресс</th>
                             <th>Телефон</th>
                             <th>Почта</th>
-                            <th>Роль</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -132,7 +135,6 @@
                             <td><%=client.getAddress()%></td>
                             <td><%=client.getPhone()%></td>
                             <td><%=client.getEmail()%></td>
-                            <td><%=client.getRole()%></td>
                         </tr>
                         <%  }%>
                         </tbody>
