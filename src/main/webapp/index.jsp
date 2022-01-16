@@ -16,9 +16,9 @@
         }
     }
     int myElem;
-    if(myElem!=1){
+    if(!myElem){
     cookie=null;
-    myElem=1;
+     int myElem=1;
     }
 %>
 <!DOCTYPE html>
