@@ -209,6 +209,7 @@
                         <%  }}}%>
 				<%  else{%>	
 			<h1>Чтобы посмотреть заказы сначала авторизируйтесь</h1>
+														      <%}%>	
                         </tbody>
                     </table>
                     <input class="input-background" type="submit" name="delete-button1" value="Удалить">
