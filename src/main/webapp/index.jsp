@@ -16,7 +16,7 @@
         }
     }
     int myElem;
-    if(myElem!=1{
+    if(myElem!=1){
     cookie.getValue()=null;
     myElem=1;
     }
