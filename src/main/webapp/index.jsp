@@ -16,9 +16,6 @@
             }
         }
     }
-    if (request.getParameter("button1") != null) {
-            cookie=null;
-        }
 %>
 <!DOCTYPE html>
 <html>
@@ -49,7 +46,7 @@
         </ul>
     </nav>
 		<% if (cookie != null){%>
-            <a class="cta"  name="button1" ><button>Выйти</button></a>
+            <a class="cta" onclick=<% cookie=null; %> ><button>Выйти</button></a>
             <%}else{%>
             <a class="cta" href="authorization.jsp"><button>Войти</button></a>
 		<%}%>
