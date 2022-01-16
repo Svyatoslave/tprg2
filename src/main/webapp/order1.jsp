@@ -212,10 +212,7 @@
                             <td><%=order.getQuantity()%></td>
                             <td><%=order.getDirection()%></td>
                         </tr>
-                        <%  }else{
-			%>
-				<h2>У вас нет заказов</h2>	
-			<% }}%>
+                        <%  }}%>
                         </tbody>
                     </table>
                     <input class="input-background" type="submit" name="delete-button1" value="Удалить">
