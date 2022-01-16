@@ -199,9 +199,8 @@
                         </thead>
                         <tbody>
                         <%
-			String loginsh=cookie.getValue();
-			 for (Order order : Database.orderList) {
-                               if (order.getClient().getName()==loginsh){
+                            for (Order order : Database.orderList) {
+                                if (order.getDirection().equals("Processed")) continue;
                         %>
                         <tr>
                             <td><input type="checkbox" name=<%="checkbox" + order.getId()%> value="<%=order.getId()%>"></td>
@@ -212,7 +211,7 @@
                             <td><%=order.getQuantity()%></td>
                             <td><%=order.getDirection()%></td>
                         </tr>
-                        <%  }}%>
+                        <%  }%>
                         </tbody>
                     </table>
                     <input class="input-background" type="submit" name="delete-button1" value="Удалить">
