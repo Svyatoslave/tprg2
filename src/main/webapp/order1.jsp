@@ -202,7 +202,7 @@
 			String loginsh=cookie.getValue();
 			Client client=Database.getClientByName(loginsh)
                             for (Order order : Database.orderList) {
-                               if (order.getClient().getName(client)) continue;
+                               if (order.getClient(client)) continue;
                         %>
                         <tr>
                             <td><input type="checkbox" name=<%="checkbox" + order.getId()%> value="<%=order.getId()%>"></td>
