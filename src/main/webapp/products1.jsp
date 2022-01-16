@@ -38,7 +38,8 @@
                 isAvailable = false;
             }
         }
-        (request.getParameter("check-button") != null && cookie.getValue()!=null){
+        if (request.getParameter("check-button") != null ) {
+			if (cookie.getValue()!=null){
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
 				String login=cookie.getValue();
 				int quantity = 1;
@@ -47,7 +48,10 @@
                     System.out.println(request.getParameter("checkbox" + Database.productList.get(i).getId()));
                     Admin.checkProduct(Database.productList.get(i).getId(),login,direction,quantity,Database.productList.get(i).getName(),Database.productList.get(i).getExpireDate());
                 }
-            }
+			}
+		}else(%>
+		<%="<script>alert(\"Вы не вошли в аккаунт чтобы работать с заказами\")</script>"%>
+		<%}
         }
     }
 %>
