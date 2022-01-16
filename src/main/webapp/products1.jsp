@@ -38,7 +38,7 @@
                 isAvailable = false;
             }
         }
-        if (request.getParameter("check-button") != null) {
+        (request.getParameter("check-button") != null && cookie.getValue()!=null){
             for (int i = Database.productList.size() - 1; i >= 0; i--) {
 				String login=cookie.getValue();
 				int quantity = 1;
