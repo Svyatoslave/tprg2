@@ -29,7 +29,7 @@
             <img class="logo" src="images/temp.png" alt="logo pic">
             <nav>
         <ul class="nav-links">
-		<%if (cookie.getValue()!="admin"){%>
+		<%if (cookie.getValue()!="admin" || cookie==null ){%>
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
