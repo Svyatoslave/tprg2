@@ -28,8 +28,9 @@
         <header>
             <img class="logo" src="images/temp.png" alt="logo pic">
             <nav>
+		     <ul class="nav-links">
 		    <% if (cookie != null){%>
-            <ul class="nav-links">
+           
 		<%if (cookie.getValue()!="admin"){%>
 		<li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
