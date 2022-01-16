@@ -79,7 +79,7 @@
     </script>
 </head>
 <body>
-<%if (!isAvailable){%>
+<%if (cookie.getValue()!="admin"){%>
 <%="<script>alert(\"Недостаточно места на складе\")</script>"%>
 <%}%>
     if(request.getParameter("add-button")!=null || request.getParameter("delete-button")!=null){%>
