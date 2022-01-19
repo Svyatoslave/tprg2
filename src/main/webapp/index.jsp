@@ -33,18 +33,19 @@
             <li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
             <li><a href="order1.jsp">Мои Заказы</a></li>
+	    <% if (cookie != null){%>
+            <li><a class="cta" href="authorization.jsp">Выйти</a></li>
+            <%}else{%>
+            <li><a class="cta" href="authorization.jsp">Войти</a></li>
+		<%}%>
 			<% if (cookie != null){%>     
-           <%="<li style=\"color: aquamarine\">User: "+cookie.getValue()+"</li>"%>
+           <%="<li style=\"color: white\">Вы вошли как: "+cookie.getValue()+"</li>"%>
             
 
       <%}%>
 </ul>
     </nav>
-		<% if (cookie != null){%>
-              <a class="cta" href="authorization.jsp"><button>Выйти</button></a>
-            <%}else{%>
-            <a class="cta" href="authorization.jsp"><button>Войти</button></a>
-		<%}%>
+		
         </header>
         <main>
             <div class="main-area">
