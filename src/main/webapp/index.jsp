@@ -32,7 +32,13 @@
 		    
             <li><a href="index.jsp">Главная</a></li>
             <li><a href="products1.jsp">Книги</a></li>
-            <li><a href="order1.jsp">Мои Заказы</a></li>
+	    <%if (cookie != null && cookie.getValue().equals("admin")){
+					%>
+					<li><a href="order.jsp">Заказы</a></li>
+			     		<li><a href="clients.jsp">Клиенты</a></li>
+					<%} elseif (cookie != null){%>
+			     			<li><a href="order1.jsp">Мои Заказы</a></li>
+					<%}%>
 	    <% if (cookie != null){%>
             <li><a class="cta" href="authorization.jsp">Выйти</a></li>
             <%}else{%>
